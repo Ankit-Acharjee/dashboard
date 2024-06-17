@@ -8,6 +8,7 @@ import {
   StepLineSeries,
   Tooltip,
 } from "@syncfusion/ej2-react-charts";
+import React from "react";
 
 const areaData = [
   { time: "1:00 AM", value: 18000 },
@@ -42,7 +43,7 @@ const axisLabelRender = (val: AxisLabelRenderEventArgs) => {
   }
 };
 
-const SteppedAreaChart = () => {
+const SteppedAreaChart: React.FC = () => {
   return (
     <ChartComponent
       primaryXAxis={{
