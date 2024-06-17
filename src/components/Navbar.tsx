@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 const Navbar = () => {
   const navLinks = ["Investments", "Company", "Candidates"];
-  const [activeLink, setActiveLink] = useState(navLinks[0]);
+  const [activeLink, setActiveLink] = useState<string>(navLinks[0]);
   return (
     <div className="flex justify-between items-center text-2xl font-semibold  px-[3.75rem] border-b-2">
       <div className="flex gap-14 text-gray-500 h-full">
