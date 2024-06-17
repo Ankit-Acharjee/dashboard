@@ -7,38 +7,40 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import React from "react";
 
-const InvestmentBox = () => {
-  interface Investment {
-    companyName: string;
-    investDate: string;
-    investedAmount: string;
-    netValue: string;
-    multiple: string;
-  }
-  const data: Investment[] = [
-    {
-      companyName: "Legacy Apps",
-      investDate: "Feb 9, 2023",
-      investedAmount: "$22,410",
-      netValue: "$22,710",
-      multiple: "1.5x",
-    },
-    {
-      companyName: "Nano Books",
-      investDate: "Nov 14, 2022",
-      investedAmount: "$7,517",
-      netValue: "$14,924",
-      multiple: "2x",
-    },
-    {
-      companyName: "Atlantics",
-      investDate: "Sep 4, 2022",
-      investedAmount: "$14,785",
-      netValue: "$17,117",
-      multiple: "1.5x",
-    },
-  ];
+interface Investment {
+  companyName: string;
+  investDate: string;
+  investedAmount: string;
+  netValue: string;
+  multiple: string;
+}
+
+const data: Investment[] = [
+  {
+    companyName: "Legacy Apps",
+    investDate: "Feb 9, 2023",
+    investedAmount: "$22,410",
+    netValue: "$22,710",
+    multiple: "1.5x",
+  },
+  {
+    companyName: "Nano Books",
+    investDate: "Nov 14, 2022",
+    investedAmount: "$7,517",
+    netValue: "$14,924",
+    multiple: "2x",
+  },
+  {
+    companyName: "Atlantics",
+    investDate: "Sep 4, 2022",
+    investedAmount: "$14,785",
+    netValue: "$17,117",
+    multiple: "1.5x",
+  },
+];
+const InvestmentBox: React.FC = () => {
   return (
     <div className="flex flex-col">
       <div className=" header flex justify-between">
