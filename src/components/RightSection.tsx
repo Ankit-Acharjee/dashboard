@@ -1,44 +1,45 @@
 import { activityDetails } from "@/constants/activityDetails";
 import Obligation from "./Obligation";
+import React from "react";
 
-const RightSection = () => {
-  interface DataType {
-    progressValue: number;
-    label: string;
-    expiryDate: string;
-    profit: string;
-    total: string;
-  }
-  const data: DataType[] = [
-    {
-      progressValue: 82,
-      label: "Mentals",
-      expiryDate: "End at 23.02.2023",
-      profit: "+$923",
-      total: "$15,450",
-    },
-    {
-      progressValue: 57,
-      label: "Social Analytics",
-      expiryDate: "End at 12.08.2023",
-      profit: "+$241",
-      total: "$21,121",
-    },
-    {
-      progressValue: 37,
-      label: "Action TVs",
-      expiryDate: "End at 29.02.2023",
-      profit: "+$973",
-      total: "$15,780",
-    },
-    {
-      progressValue: 13,
-      label: "Goalscore",
-      expiryDate: "End at 14.02.2033",
-      profit: "+$464",
-      total: "$47,465",
-    },
-  ];
+interface DataType {
+  progressValue: number;
+  label: string;
+  expiryDate: string;
+  profit: string;
+  total: string;
+}
+const data: DataType[] = [
+  {
+    progressValue: 82,
+    label: "Mentals",
+    expiryDate: "End at 23.02.2023",
+    profit: "+$923",
+    total: "$15,450",
+  },
+  {
+    progressValue: 57,
+    label: "Social Analytics",
+    expiryDate: "End at 12.08.2023",
+    profit: "+$241",
+    total: "$21,121",
+  },
+  {
+    progressValue: 37,
+    label: "Action TVs",
+    expiryDate: "End at 29.02.2023",
+    profit: "+$973",
+    total: "$15,780",
+  },
+  {
+    progressValue: 13,
+    label: "Goalscore",
+    expiryDate: "End at 14.02.2033",
+    profit: "+$464",
+    total: "$47,465",
+  },
+];
+const RightSection:React.FC = () => {
   return (
     <div className="bg-slate-200 bg-opacity-80 w-full h-full  pt-8 px-[3.75rem]">
       <div className="flex mb-1 justify-between">
