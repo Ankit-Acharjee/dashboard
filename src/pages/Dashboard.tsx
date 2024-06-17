@@ -1,12 +1,11 @@
-import Investments from "@/components/Investments"
+import Investments from "@/components/Investments";
 
-const Dashboard = () => {
-    return (
-      <div>
-        <Investments />
-        
-      </div>
-    )
-  }
-  
-  export default Dashboard
+const Dashboard: React.FC = () => {
+  return (
+    <div>
+      <Investments />
+    </div>
+  );
+};
+
+export default Dashboard;
