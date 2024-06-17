@@ -1,14 +1,21 @@
+import React from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-interface ObligationProps{
-  progressValue: number,
-  label: string,
-  expiryDate: string,
-  profit: string,
-  total: string,
+interface ObligationProps {
+  progressValue: number;
+  label: string;
+  expiryDate: string;
+  profit: string;
+  total: string;
 }
-const Obligation = ({progressValue,label,expiryDate,profit,total}:ObligationProps) => {
+const Obligation: React.FC<ObligationProps> = ({
+  progressValue,
+  label,
+  expiryDate,
+  profit,
+  total,
+}) => {
   return (
     <div className="flex justify-between mt-3 px-[1.0625rem]">
       <div className=" flex justify-between w-full">
@@ -32,9 +39,7 @@ const Obligation = ({progressValue,label,expiryDate,profit,total}:ObligationProp
           </div>
           <div className="flex flex-col ">
             <span className="font-semibold text-xl text-black">{label}</span>
-            <span className="text-gray-400 font-semibold">
-              {expiryDate}
-            </span>
+            <span className="text-gray-400 font-semibold">{expiryDate}</span>
           </div>
         </div>
       </div>
