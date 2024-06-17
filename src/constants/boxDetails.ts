@@ -1,4 +1,4 @@
-interface boxDetail {
+export interface boxDetail {
   label: string;
   price: string;
 }
