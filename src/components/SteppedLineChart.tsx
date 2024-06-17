@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Category,
   ChartComponent,
@@ -7,7 +8,12 @@ import {
   StepLineSeries,
 } from "@syncfusion/ej2-react-charts";
 
-const data = [
+interface DataType {
+  time: string;
+  value: number;
+}
+
+const data: DataType[] = [
   { time: "1:00 AM", value: 15000 },
   { time: "6:00 AM", value: 12000 },
   { time: "12:00 PM", value: 25000 },
@@ -15,7 +21,7 @@ const data = [
   { time: "", value: 35000 },
 ];
 
-const SmallStepLineChart = () => {
+const SmallStepLineChart: React.FC = () => {
   return (
     <ChartComponent
       primaryXAxis={{ valueType: "Category", visible: false }}
