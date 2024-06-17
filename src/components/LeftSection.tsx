@@ -1,18 +1,21 @@
-import { useState } from "react";
-import { boxDetails } from "@/constants/boxDetails";
+import React, { useState } from "react";
+import { boxDetail, boxDetails } from "@/constants/boxDetails";
 import { cn } from "@/lib/utils";
 import Box from "./Box";
 import InvestmentBox from "./InvestmentBox";
 import SteppedAreaChart from "./Chart";
 
-const LeftSection = () => {
-  const [selectedValue, setSelectedValue] = useState<string>("option-one");
+type CheckedValue = "option-one" | "option-two";
+
+const LeftSection: React.FC = () => {
+  const [selectedValue, setSelectedValue] =
+    useState<CheckedValue>("option-one");
   const links = ["Daily", "Weekly", "Monthly", "Yearly"];
 
-  const [activeLink, setActiveLink] = useState(links[0]);
-  const [activeBox, setActiveBox] = useState(boxDetails[0]);
+  const [activeLink, setActiveLink] = useState<string>(links[0]);
+  const [activeBox, setActiveBox] = useState<boxDetail>(boxDetails[0]);
 
-  const handleChange = (value: string) => {
+  const handleChange = (value: CheckedValue) => {
     setSelectedValue(value);
   };
   return (
