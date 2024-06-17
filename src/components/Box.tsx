@@ -1,3 +1,4 @@
+import React from "react";
 import SmallStepLineChart from "./SteppedLineChart";
 import { cn } from "@/lib/utils";
 interface Detail {
@@ -5,7 +6,7 @@ interface Detail {
   price: string;
 }
 
-const Box = ({ label, price }: Detail) => {
+const Box: React.FC<Detail> = ({ label, price }) => {
   return (
     <div
       className={cn(
