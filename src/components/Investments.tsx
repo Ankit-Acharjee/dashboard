@@ -1,7 +1,8 @@
+import React from "react";
 import LeftSection from "./LeftSection";
 import RightSection from "./RightSection";
 
-const Investments = () => {
+const Investments: React.FC = () => {
   return (
     <div className="flex w-full h-[87vh]">
       {/* h-[calc(100vh-123px)] */}
