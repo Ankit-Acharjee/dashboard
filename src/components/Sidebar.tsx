@@ -6,8 +6,9 @@ import DashboardIcon from "@/icons/DashboardIcon";
 import DocumentsIcon from "@/icons/DocumentsIcon";
 import MessagesIcon from "@/icons/MessagesIcon";
 import WalletIcon from "@/icons/WalletIcon";
+import React from "react";
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   const { pathname } = useLocation();
 
   return (
@@ -59,7 +60,9 @@ const Sidebar = () => {
             <li className="flex mb-7 items-center">
               <MessagesIcon
                 color={
-                  pathname === "/messages" ? "text-lime-green" : "text-slate-400"
+                  pathname === "/messages"
+                    ? "text-lime-green"
+                    : "text-slate-400"
                 }
               />
               <span className="ms-3">Messages</span>
